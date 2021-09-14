@@ -1,7 +1,7 @@
 /* On window load */
 window.addEventListener('load', () => {
     // Requesting JSON data
-    let requestURL = "http://127.0.0.1:5500/app/js/data.json";
+    let requestURL = "https://elisa-charrier.github.io/time-tracking-dashboard/app/js/data.json";
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
