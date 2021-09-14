@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,CAAC,EAAE,CAAC,AAAA,OAAO,EAAE,CAAC,AAAA,QAAQ,CAAC;EACnB,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;AAED,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,aAAa;EACpB,gBAAgB,EAAE,QAAQ;CAC7B;;ACdD,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,GAAG;EAC1B,kBAAkB,EAAE,cAAc;CACrC",
+    "sources": [
+        "../app/scss/style.scss",
+        "../app/scss/_variables.scss",
+        "../app/scss/_global.scss",
+        "../app/scss/_css-grid.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
