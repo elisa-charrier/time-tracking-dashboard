@@ -20,9 +20,12 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### Built with
 
--
--
--
+- CSS Grid
+- Javascript
+- Json
+- Scss preprocessor
+- Semantic html
+- 
 
 ### What I learned
 1. How to load Json files and use data stored inside in js
@@ -30,10 +33,13 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### Continued development
 
+1. dark and light mode
+
 ### Useful resources
 
 [Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) - MDN article giving bases to work with data stored in JSON using Javascript.
-[A complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - The better place to find all the informations about CSS Grid Layout.
+[CSS Grid Garden](https://cssgridgarden.com/#it) - I suggest you play this game if you don't know how to use css grid. You'll learn the basics in no time!  
+[A complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - In this article you find a recap of all the informations about CSS Grid Layout.
 
 ## Author
 
