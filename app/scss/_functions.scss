@@ -1,0 +1,7 @@
+/* toRem converts px to rem units */
+
+// ex. font-size: toRem(18);
+@function toRem($pixels) {
+    $rems: ($pixels / 16) + rem; 
+    @return $rems;
+}
