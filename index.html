@@ -11,42 +11,100 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
-    <main class="grid-content">
-        <!-- Report header -->
-        <header>
-            <img src="./app/img/image-jeremy.png" alt="Profile image">
-            <h1><span class="">Report for</span> Jeremy Robson</h1>
-            
-            <nav>
-                <button id="daily">Daily</button>
-                <button id="weekly">Weekly</button>
-                <button id="monthly">Monthly</button>
+    <main class="grid">
+        <!-- Header card -->
+        <header class="card card--header">
+            <!-- Hero -->
+            <div class="card__hero">
+                <img class="card__profile-img" src="./app/img/image-jeremy.png" alt="Profile image">
+                <h1><span>Report for</span><br>Jeremy Robson</h1>
+            </div>
+
+            <!-- Navigation menu -->
+            <nav class="card__nav">
+                <a id="daily" class="selected">Daily</a>
+                <a id="weekly">Weekly</a>
+                <a id="monthly">Monthly</a>
             </nav>
         </header>
-
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
-
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
         
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
-
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
+        <!-- Card n.1 - WORK -->
+        <div class="card card--default card--work">
+            <div class="card__logo">
+                <img src="./app/img/icon-work.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
         
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
+        <!-- Card n.2 - PLAY -->
+        <div class="card card--default card--play">
+            <div class="card__logo">
+                <img src="./app/img/icon-play.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
 
-        <h2 class="frame__title"></h2>
-        <p class="frame__current-time"></p>
-        <p class="frame__previous-time"></p>
+        <!-- Card n.3 - STUDY -->
+        <div class="card card--default card--study">
+            <div class="card__logo">
+                <img src="./app/img/icon-study.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
+
+        <!-- Card n.4 - EXERCISE -->
+        <div class="card card--default card--exercise">
+            <div class="card__logo">
+                <img src="./app/img/icon-exercise.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
+
+        <!-- Card n.5 - SOCIAL -->
+        <div class="card card--default card--social">
+            <div class="card__logo">
+                <img src="./app/img/icon-social.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
+        
+        <!-- Card n.6 - SELF CARE -->
+        <div class="card card--default card--self-care">
+            <div class="card__logo">
+                <img src="./app/img/icon-self-care.svg" alt="Work background image">
+            </div>
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <img class="card__icon" src="./app/img/icon-ellipsis.svg" alt="">
+                <p class="card__current-time"></p>
+                <p class="card__previous-time"></p>
+            </div>
+        </div>
     </main>
 
     <!-- Javascript -->

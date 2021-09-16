@@ -10,6 +10,21 @@ html {
 }
 
 body {
-    color: darkslategray;
-    background-color: darkcyan;
+    font-family: $rubikFont;
+    font-size: toRem(18);
+    font-weight: $normalWeight;
+    color: #fff;
+
+    background-color: $veryDarkBlue;
+}
+
+main {
+    margin: toRem(80) toRem(25);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: toRem(203) repeat(6, toRem(160));
+    gap: toRem(24);
 }

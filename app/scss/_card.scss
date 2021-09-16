@@ -1,0 +1,127 @@
+.card {
+    width: 100%;
+    border-radius: toRem(15);
+    overflow: hidden;
+
+    /* Styling header card */
+    &--header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background-color: $darkBlue;
+    }
+
+    &__hero {
+        display: flex;
+        align-items: center;
+
+        height: toRem(133);
+        border-radius: toRem(15);
+
+        background-color: $blue;
+    }
+    &__profile-img {
+        width: toRem(71);
+        height: toRem(71);
+        border: toRem(3) solid #fff;
+        border-radius: 50%;
+        margin-left: toRem(28);
+    }
+    h1 {
+        margin-left: toRem(18);
+    
+        font-size: toRem(22);
+        font-weight: $normalWeight;
+
+        span {
+            font-size: toRem(15);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        
+        margin-bottom: toRem(25);
+
+        color: $desaturatedBlue;
+
+        a:hover, .selected {
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    /* Styling default cards */
+    &--default {
+        height: toRem(160);
+        position: relative;
+    }
+
+    &__logo {
+        width: 100%;
+        height: toRem(79);
+        overflow: hidden;
+
+        position: relative;
+
+        img {
+            width: toRem(79);
+
+            position: absolute;
+            top: toRem(-11);
+            right: toRem(17);
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        width: 100%;
+        height: toRem(122);
+        padding: toRem(31) toRem(24) toRem(35) toRem(24);
+        border-radius: toRem(15);
+
+        position: absolute;
+        top: toRem(38);
+
+        background-color: $darkBlue;
+    }
+
+    &__title {
+        align-self: center;
+    
+        font-size: toRem(15);
+        font-weight: $boldWeight;
+    }
+
+    &__icon {
+        place-self: center end;
+    }
+    
+    &__current-time {
+        align-self: center;
+
+        font-size: toRem(23);
+        
+    }
+
+    &__previous-time {
+        grid-area: 2 / 2;
+        place-self: center end;
+
+        font-size: toRem(12);
+        color: $desaturatedBlue;
+    }
+
+    &--work {background-color: $lightOrange;}
+    &--play {background-color: $softBlue;}
+    &--study {background-color: $lightRed;}
+    &--exercise {background-color: $limeGreen;}
+    &--social {background-color: $violet;}
+    &--self-care {background-color: $softOrange;}
+}
