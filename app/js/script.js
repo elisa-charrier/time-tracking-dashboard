@@ -34,15 +34,19 @@ window.addEventListener('load', () => {
 
 /* Function to switch content based on daily, weekly or monthly selection */
 function populateTimeframes(data, t = "daily") {
-    for (let i = 0; i < data.length; i++) {
-        
+    for (let i = 0; i < data.length; i++) {    
         // Writing title
-        document.getElementsByClassName("frame__title")[i].textContent = data[i].title;
+        document.getElementsByClassName("card__title")[i].textContent = data[i].title;
 
         // Writing current timeframe
-        document.getElementsByClassName("frame__current-time")[i].textContent = data[i].timeframes[t].current;
+        document.getElementsByClassName("card__current-time")[i].textContent = data[i].timeframes[t].current + "hrs";
 
         // Writing previous timeframe
-        document.getElementsByClassName("frame__previous-time")[i].textContent = data[i].timeframes[t].previous;
+        document.getElementsByClassName("card__previous-time")[i].textContent = "Last Week - " + data[i].timeframes[t].previous + "hrs";
     }
+
+    // Getting previous selected option and switching to the new one
+    const previousT = document.getElementsByClassName("selected")[0];
+    previousT.classList.remove("selected");
+    document.getElementById(t).classList.add("selected");
 }
