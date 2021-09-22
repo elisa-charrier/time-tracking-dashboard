@@ -1,3 +1,4 @@
+/* Mobile Layout */
 html {
     box-sizing: border-box;
     font-size: 100%;
@@ -10,6 +11,8 @@ html {
 }
 
 body {
+    min-height: 100vh;
+
     font-family: $rubikFont;
     font-size: toRem(18);
     font-weight: $normalWeight;
@@ -18,13 +21,42 @@ body {
     background-color: $veryDarkBlue;
 }
 
-main {
-    margin: toRem(80) toRem(25);
-}
-
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: toRem(203) repeat(6, toRem(160));
     gap: toRem(24);
+
+    padding: toRem(80) toRem(25);
+}
+
+
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        display: flex;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: toRem(203) repeat(3, toRem(160));
+        width: 100%;
+    }
+}
+
+
+/* Dekstop Layout */
+@media (min-width: 1025px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, minmax(auto, toRem(255)));
+        grid-template-rows: repeat(2, minmax(auto, toRem(244)));
+        gap: toRem(30);
+    }
 }

@@ -1,22 +1,22 @@
+/* Mobile Layout */
 .card {
+    display: grid;
+    grid-template-rows: toRem(38) 1fr;
+    grid-template-columns: 1fr;
+
     width: 100%;
     border-radius: toRem(15);
-    overflow: hidden;
 
     /* Styling header card */
     &--header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
+        grid-template-rows: 1fr toRem(70);
         background-color: $darkBlue;
     }
 
+    // Header card hero
     &__hero {
         display: flex;
         align-items: center;
-
-        height: toRem(133);
         border-radius: toRem(15);
 
         background-color: $blue;
@@ -32,41 +32,32 @@
         margin-left: toRem(18);
     
         font-size: toRem(22);
-        font-weight: $normalWeight;
+        font-weight: $thinWeight;
 
         span {
             font-size: toRem(15);
         }
     }
 
+    // Header card navigation bar
     &__nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        
-        margin-bottom: toRem(25);
 
         color: $desaturatedBlue;
 
-        a:hover, .selected {
-            color: #fff;
+        a:hover, a:active, .selected {
             cursor: pointer;
+            color: #fff;
         }
     }
 
     /* Styling default cards */
-    &--default {
-        height: toRem(160);
-        position: relative;
-    }
-
     &__logo {
-        width: 100%;
-        height: toRem(79);
-        overflow: hidden;
-
         position: relative;
+        overflow: hidden;
 
         img {
             width: toRem(79);
@@ -81,19 +72,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        width: 100%;
-        height: toRem(122);
         padding: toRem(31) toRem(24) toRem(35) toRem(24);
         border-radius: toRem(15);
 
-        position: absolute;
-        top: toRem(38);
-
         background-color: $darkBlue;
+        transition: all 300ms ease-in 100ms;
+    }
+    &__content:hover, &__content:active {
+        cursor: pointer;
+        background-color: $softDarkBlue;
     }
 
     &__title {
-        align-self: center;
+        place-self: center start;
     
         font-size: toRem(15);
         font-weight: $boldWeight;
@@ -104,10 +95,10 @@
     }
     
     &__current-time {
-        align-self: center;
+        place-self: center start;
 
-        font-size: toRem(23);
-        
+        font-size: toRem(24);
+        font-weight: $thinWeight;
     }
 
     &__previous-time {
@@ -118,10 +109,84 @@
         color: $desaturatedBlue;
     }
 
+    /* Cards colors*/
     &--work {background-color: $lightOrange;}
     &--play {background-color: $softBlue;}
     &--study {background-color: $lightRed;}
     &--exercise {background-color: $limeGreen;}
     &--social {background-color: $violet;}
     &--self-care {background-color: $softOrange;}
+}
+
+
+/* Tablet Layout */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        /* Styling header card */
+        &--header {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+
+
+/* Dekstop Layout */
+@media (min-width: 1025px) {
+    .card {
+        grid-template-rows: toRem(45) 1fr;
+
+        /* Styling header card */
+        &--header {
+            grid-template-rows: 1fr toRem(165);
+            grid-row: 1 / span 2;
+        }
+
+        // Header card hero
+        &__hero {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            height: toRem(356);
+        }
+        &__profile-img {
+            width: toRem(84);
+            height: toRem(84);
+            margin-left: toRem(29);
+            margin-top: toRem(34);
+        }
+        h1 {
+            margin-left: toRem(34);
+
+            font-size: toRem(36);
+        }
+
+        // Header card navigation bar
+        &__nav {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            margin: toRem(25) 0 toRem(33) toRem(34);
+        }
+
+        /* Styling default cards */
+        &__content {
+            padding: toRem(33) toRem(31);
+        }
+
+        &__current-time {
+            grid-column: 1 / span 2;
+            grid-row: 2 / 3;
+            place-self: center start;
+
+            font-size: toRem(40);
+        }
+        &__previous-time {
+            grid-column: 1 / span 2;
+            grid-row: 3 / 4;
+            place-self: center start;
+        }
+    }
 }
