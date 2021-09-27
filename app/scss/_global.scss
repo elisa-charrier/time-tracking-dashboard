@@ -21,6 +21,10 @@ body {
     background-color: $veryDarkBlue;
 }
 
+a {
+    text-decoration: none;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -31,11 +35,24 @@ body {
 }
 
 
+.attribution { 
+    margin-bottom: toRem(15);
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        font-style: italic;
+        color: $desaturatedBlue; 
+    }
+}
+
+
 /* Tablet Layout */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .grid {
@@ -50,6 +67,7 @@ body {
 @media (min-width: 1025px) {
     body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

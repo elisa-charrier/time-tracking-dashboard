@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
 } );
 
 /* Function to switch content based on daily, weekly or monthly selection */
-function populateTimeframes(data, t) {
+function populateTimeframes(data, t = "weekly") {
     for (let i = 0; i < data.length; i++) {    
         // Writing title
         document.getElementsByClassName("card__title")[i].textContent = data[i].title;
